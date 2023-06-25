@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+body{
+    background-color: #f5f8ff;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    background-color: #fff;
+    width: min(90%, 37.5em);
+    padding: 3.12em 1.87em;
+    margin-top: 1em;
+    box-shadow: 0 1.25em 3.43em rgba(0, 0, 0, 0.08);
+    border-radius: 0.5em;
+}
+input[type=file]{
+    display: none;
+}
+
+label{
+    display: block;
+    position: relative;
+    background-color: #025bee;
+    color: #fff;
+    padding: 1em 0;
+    width: min(100%,16em);
+    text-align: center;
+    border-radius: 0.3em;
+    margin: 0 auto 1em auto;
+    cursor: pointer;
+    font-size: max(1rem,1vw + 0.5rem);
+}
+
+#error{
+    text-align: center;
+    color: #ff3030;
+}
+
+#image-display{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:1.25em;
+}
+#image-display figure{
+    width: max(3em,15%);
+}
+#image-display img{
+    width: 100%;
+}
+#image-display figcaption{
+    font-size: 0.8rem;
+    text-align: center;
+    color: #5a5861;
+}
+
+.active{
+    border:0.2em dashed #025bee;
+}
