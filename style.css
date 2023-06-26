@@ -50,9 +50,11 @@ label{
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap:1.25em;
+    max-height: 250px;
+    overflow-y: auto;
 }
 #image-display figure{
-    width: max(3em,15%);
+    width:max(5em, 6vw + 1em);
 }
 #image-display img{
     width: 100%;
@@ -61,6 +63,9 @@ label{
     font-size: 0.8rem;
     text-align: center;
     color: #5a5861;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
 }
 
 .active{
