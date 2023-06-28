@@ -1,8 +1,7 @@
 const uploadButton = document.getElementById("upload-button");
 const chosenImage = document.getElementById("chosen-image");
-const fileName = document.getElementById("file-name");
-const container = document.querySelector(".container");
-const error = document.getElementById("error");
+const container = document.querySelector(".file-container");
+const error = document.getElementById("upload-error");
 const imageDisplay = document.getElementById("image-display");
 
 
@@ -10,7 +9,7 @@ const fileHandler = (file,name,type) =>{
 
     if (type.split("/")[0] !== "image"){
         //File Type errors
-        error.innerText = "Please upload an image file";
+        error.innerText = "Faça upload apenas de imagens";
         return false;
     }
     error.innerText = "";
@@ -37,25 +36,25 @@ uploadButton.addEventListener("change", () => {
 container.addEventListener("dragenter", (e) =>{
     e.preventDefault();
     e.stopPropagation();
-    container.classList.add("active");
+    container.classList.add("dragActiveBorder");
 }, false);
 
 container.addEventListener("dragleave", (e) =>{
     e.preventDefault();
     e.stopPropagation();
-    container.classList.remove("active");
+    container.classList.remove("dragActiveBorder");
 },false);
 
 container.addEventListener("dragover", (e) =>{
     e.preventDefault();
     e.stopPropagation();
-    container.classList.add("active");
+    container.classList.add("dragActiveBorder");
 },false);
 
 container.addEventListener("drop", (e) => {
     e.preventDefault();
     e.stopPropagation();
-    container.classList.remove("active");
+    container.classList.remove("dragActiveBorder");
     let draggedData = e.dataTransfer;
     let files = draggedData.files;
     imageDisplay.innerHTML = ""
